@@ -28,11 +28,4 @@ class Tag extends Model
             ->withTimestamps();
     }
 
-    static function GetModelsFromString($string){
-        $tags = [];
-        $tags_texts = explode(', ', $string);
-        foreach ($tags_texts as $tag_text){
-            $tags []= Tag::CreateOrGet($tag_text);
-        }
-    }
 }
