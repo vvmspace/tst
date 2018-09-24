@@ -5,8 +5,10 @@
             <div class="col-md-12">
                 @auth()
                 {!! Form::open(['route' => 'post.store']) !!}
-                {!! Form::label('title', 'Title') !!}
-                {!! Form::text('title') !!}
+                {!! Form::label('title', 'Title', ['class' => 'form-control']) !!}
+                {!! Form::text('title', ['class' => 'form-control']) !!}
+                {!! Form::label('tags_text', 'Tags', ['class' => 'form-control']) !!}
+                {!! Form::text('tags_text', ['class' => 'form-control']) !!}
                 {!! Form::close() !!}
                 @endauth
                 @guest()
