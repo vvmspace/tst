@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach($posts as $post)
+    @forelse($posts as $post)
         <h2>{{ $post->title }}</h2>
         <div>{{ $post->text }}</div>
-    @endforeach
+        @else
+            <h2>No content</h2>
+    @endforelse
 @endsection
