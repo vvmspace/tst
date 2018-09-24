@@ -13,7 +13,15 @@ class PostTag extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('post_tag', function (Blueprint $table) {
+            $table->integer('post_id')->unsigned()->nullable();
+            $table->foreign('post_id')->references('id')
+                ->on('posts')->onDelete('cascade');
+            $table->integer('tag_id')->unsigned()->nullable();
+            $table->foreign('tag_id')->references('id')
+                ->on('tags')->onDelete('cascade');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class PostTag extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('post_tag');
     }
 }
