@@ -1,0 +1,2 @@
+188.234.215.26 - - [24/Sep/2018:16:27:09 +0300] "GET / HTTP/1.1" 200 1816 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+188.234.215.26 - - [24/Sep/2018:16:27:09 +0300] "GET /favicon.ico HTTP/1.1" 200 295 "http://tst.vvm.space/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
