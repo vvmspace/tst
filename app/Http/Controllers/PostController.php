@@ -43,6 +43,9 @@ class PostController extends Controller
             $post = Post::create(
                 $data
             );
+
+            // Slug не успеваю
+
             $post->attachTagsFromString($request->input('tags_text'));
         }
 
