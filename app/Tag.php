@@ -27,4 +27,12 @@ class Tag extends Model
         return $this->belongsToMany(Post::class, 'post_tag')
             ->withTimestamps();
     }
+
+    static function GetModelsFromString($string){
+        $tags = [];
+        $tags_texts = explode(', ', $string);
+        foreach ($tags_texts as $tag_text){
+            $tags []= Tag::CreateOrGet($tag_text);
+        }
+    }
 }

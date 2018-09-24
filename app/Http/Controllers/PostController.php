@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -35,7 +36,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if(Auth::check()){
+            $data = $request->except('tags_text');
+            $data['user_id'] = Auth::user()->id;
+
+            $post = Post::create(
+                $data
+            );
+            $post->attachTagsFromString($request->input('tags_text'));
+        }
+
+        return redirect(route('main'));
     }
 
     /**
