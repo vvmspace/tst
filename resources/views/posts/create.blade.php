@@ -11,6 +11,7 @@
                 {!! Form::textarea('body', '', ['class' => 'form-control']) !!}
                 {!! Form::label('tags_text', 'Tags') !!}
                 {!! Form::text('tags_text', '', ['class' => 'form-control']) !!}
+                {!! Form::submit('Submit') !!}
                 {!! Form::close() !!}
                 @endauth
                 @guest()
