@@ -81,8 +81,6 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        dump($tag);
-
         if(Auth::check()){
             $tag->delete();
         }
