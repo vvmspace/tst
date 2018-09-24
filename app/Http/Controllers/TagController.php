@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TagController extends Controller
 {
@@ -80,6 +81,10 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        if(Auth::check()){
+            $tag->delete();
+        }
+
+        return back();
     }
 }
