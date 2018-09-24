@@ -8,7 +8,7 @@
                 {!! Form::label('title', 'Title', ['class' => 'form-control']) !!}
                 {!! Form::text('title') !!}
                 {!! Form::label('tags_text', 'Tags', ['class' => 'form-control']) !!}
-                {!! Form::text('tags_text') !!}
+                {!! Form::text('tags_text', ['class' => 'form-control']) !!}
                 {!! Form::close() !!}
                 @endauth
                 @guest()
