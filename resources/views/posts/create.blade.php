@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12">
                 @auth()
-                {!! Form::open(['route' => 'route.name']) !!}
+                {!! Form::open(['route' => 'post.store']) !!}
                 {!! Form::label('title', 'Title') !!}
                 {!! Form::text('title') !!}
                 {!! Form::close() !!}
